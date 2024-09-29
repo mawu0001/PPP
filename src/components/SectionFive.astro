@@ -1,10 +1,14 @@
 ---
-
+import { Image } from "astro:assets";
+import fb from "../assets/images/fb.svg";
+import ig from "../assets/images/ig.svg";
 ---
 
 <section id="section5">
-  <h4>05/</h4>
-  <h2>contacts</h2>
+  <article>
+    <h4>05/</h4>
+    <h2>contacts</h2>
+  </article>
 
   <article>
     <h3>contact info</h3>
@@ -13,20 +17,28 @@
     <a href="www.linkedin.com/in/marie-wulff">www.linkedin.com/in/marie-wulff</a
     >
   </article>
+
   <article>
     <h3>socials</h3>
     <div>
+      <Image src={fb} alt="facebook icon" />
       <p>Marie wulff</p>
     </div>
     <div>
+      <Image src={ig} alt="instagram icon" />
       <p>Marie_wulff</p>
     </div>
   </article>
 </section>
 
 <style>
-  @layer components {
-    .icons {
+  article {
+    margin-bottom: 3rem;
+    gap: 1rem;
+  }
+  div {
+    display: flex;
+    img {
       width: 24px;
     }
   }
