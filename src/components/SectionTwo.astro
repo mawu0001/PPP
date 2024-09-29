@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+
+import profilePicture from "../assets/images/profilePicture.png";
+---
+
+<section>
+  <Image src={profilePicture} alt="Profile picture of Marie Wulff" />
+</section>
+
+<style>
+  @layer component {
+    section {
+      display: flex;
+    }
+
+    img {
+      width: 320px;
+      height: auto;
+    }
+  }
+</style>
