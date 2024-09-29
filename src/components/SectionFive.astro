@@ -6,7 +6,7 @@ import ig from "../assets/images/ig.svg";
 
 <section id="section5" class="flow-space">
   <article>
-    <h4>05/</h4>
+    <h4><span>05/</span></h4>
     <h2>contacts</h2>
   </article>
 
@@ -14,7 +14,8 @@ import ig from "../assets/images/ig.svg";
     <h3>contact info</h3>
     <p>mariewulff01@gmail.com</p>
     <p>+45 52651659</p>
-    <a href="www.linkedin.com/in/marie-wulff">www.linkedin.com/in/marie-wulff</a
+    <a href="www.linkedin.com/in/marie-wulff"
+      >CV : www.linkedin.com/in/marie-wulff</a
     >
   </article>
 
@@ -32,12 +33,20 @@ import ig from "../assets/images/ig.svg";
 </section>
 
 <style>
+  section {
+    > * + * {
+      margin-bottom: 3rem;
+    }
+  }
+
   article {
-    margin-bottom: 3rem;
-    gap: 1rem;
+    a {
+      text-decoration: none;
+    }
   }
   div {
     display: flex;
+    gap: 0.5rem;
     img {
       width: 24px;
     }

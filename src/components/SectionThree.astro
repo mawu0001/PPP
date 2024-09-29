@@ -4,29 +4,34 @@ import project1 from "../assets/images/project1.png";
 ---
 
 <section id="section3">
-  <div>
-    <h4>03/</h4>
-    <h2>projects</h2>
-  </div>
+  <h4>
+    <span>03/ </span>
+  </h4>
+  <h2>projects</h2>
+
   <article>
-    <h3>animation <br /> hot dog puppy</h3>
+    <div>
+      <h3>
+        1/ animation <br /> hot dog puppy
+      </h3>
+      <p>Designed and developed a mini game about a hot dog puppy</p>
+    </div>
     <Image src={project1} alt="Picture of hot dog puppy the game" />
-    <p>Designed and developed a mini game about a hot dog puppy</p>
   </article>
 </section>
-
 <style>
-  @layer components {
-    article {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto;
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    place-content: start;
+    gap: 3rem;
+    place-items: center;
 
-      img {
-        grid-column: 2;
-        grid-row: 1 / span 2;
-        border-radius: 1rem;
-      }
+    img {
+      width: 35rem;
+      height: auto;
+      border-radius: 1rem;
     }
   }
 </style>

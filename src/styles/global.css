@@ -94,7 +94,7 @@ a {
   font-weight: 400;
   line-height: normal;
   color: var(--color-txt);
-  max-width: 65ch;
+  max-width: 40ch;
 
   --flow-space: var(var(--space-xs));
 }

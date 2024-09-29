@@ -4,50 +4,62 @@ import profilePicture from "../assets/images/profilePicture.png";
 ---
 
 <section id="section2">
-  <Image src={profilePicture} alt="Profile picture of Marie Wulff" />
-  <article>
-    <h4>02/</h4>
-    <h2>about</h2>
-    <p>
-      I’m currently studying at Copenhagen School of Design and Technology. I’ve
-      chosen to specialise in <span>frontend</span> design.
-    </p>
-  </article>
   <div>
-    <p>
+    <Image src={profilePicture} alt="Profile picture of Marie Wulff" />
+    <article>
+      <h4><span>02/</span></h4>
+      <h2>about</h2>
+      <p>
+        I’m currently studying at Copenhagen School of Design and Technology.
+        I’ve chosen to specialise in <span>frontend</span> design.
+      </p>
+    </article>
+  </div>
+  <ul>
+    <li>
       I’m would love to study backend developing, and become a full-stack
       developer in the future.
-    </p>
-    <p>
+    </li>
+    <li>
       In my spare time, catch me hanging out with my friends, working out in my
       local gym or watching a movie in the cinema.
-    </p>
-  </div>
+    </li>
+  </ul>
 </section>
 
 <style>
-  @layer components {
-    section {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      place-items: center;
+  div {
+    display: flex;
+    place-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
 
-      div {
-        display: flex;
-        background: var(--color-card-bg);
-        place-content: space-between;
-
-        p {
-          padding: 2rem;
-          border-radius: 1rem;
-        }
-      }
+    article {
+      place-self: center;
     }
+  }
+  img {
+    width: 23rem;
+    height: auto;
+    border-radius: 5%;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    place-content: space-evenly;
+  }
+  li {
+    background: var(--color-card-bg);
+    padding: 1rem;
+    border-radius: 2rem;
+    max-width: 24rem;
+  }
 
+  @media (max-width: 800px) {
     img {
-      width: 320px;
-      height: auto;
-      border-radius: 5%;
+      order: 2;
     }
   }
 </style>

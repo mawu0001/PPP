@@ -3,7 +3,7 @@
 ---
 
 <section id="section4">
-  <h4>04/</h4>
+  <h4><span>04/</span></h4>
   <h2>skills</h2>
   <div class="lists">
     <ul>
@@ -14,6 +14,7 @@
       <h3>programming/ <br /> Scripting language</h3>
       <li>html</li>
       <li>css</li>
+      <li>javascript</li>
       <li>Astro frameworks</li>
     </ul>
     <ul>
@@ -35,7 +36,8 @@
   .lists {
     display: flex;
     place-content: end;
-    gap: 3rem;
+    gap: 10rem;
+    flex-wrap: wrap;
 
     ul {
       list-style: none;
@@ -47,8 +49,8 @@
     }
     li {
       background: var(--color-card-bg);
-      width: fit-content;
       padding: 1rem;
+      width: fit-content;
       border-radius: 2rem;
       text-align: right;
     }
