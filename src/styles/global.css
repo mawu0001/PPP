@@ -73,6 +73,8 @@ h3 {
   line-height: normal;
   text-transform: uppercase;
   color: var(--color-txt);
+
+  --flow-space: var(var(--space-s));
 }
 h4 {
   font-family: var(--primary-font);
@@ -93,6 +95,8 @@ a {
   line-height: normal;
   color: var(--color-txt);
   max-width: 65ch;
+
+  --flow-space: var(var(--space-xs));
 }
 
 body {
