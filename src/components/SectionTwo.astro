@@ -1,22 +1,52 @@
 ---
 import { Image } from "astro:assets";
-
 import profilePicture from "../assets/images/profilePicture.png";
 ---
 
-<section>
+<section id="section2">
   <Image src={profilePicture} alt="Profile picture of Marie Wulff" />
+  <article>
+    <h4>02/</h4>
+    <h2>about</h2>
+    <p>
+      I’m currently studying at Copenhagen School of Design and Technology. I’ve
+      chosen to specialise in <span>frontend</span> design.
+    </p>
+  </article>
+  <div>
+    <p>
+      I’m would love to study backend developing, and become a full-stack
+      developer in the future.
+    </p>
+  </div>
+  <div>
+    <p>
+      In my spare time, catch me hanging out with my friends, working out in my
+      local gym or watching a movie in the cinema.
+    </p>
+  </div>
 </section>
 
 <style>
-  @layer component {
+  @layer components {
     section {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      place-items: center;
+
+      div {
+        background: var(--color-card-bg);
+        padding: 2rem;
+        border-radius: 2rem;
+        width: 320px;
+        height: 140px;
+      }
     }
 
     img {
       width: 320px;
       height: auto;
+      border-radius: 5%;
     }
   }
 </style>

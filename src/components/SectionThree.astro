@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import project1 from "../assets/images/project1.png";
+---
+
+<section id="section3">
+  <div>
+    <h4>03/</h4>
+    <h2>projects</h2>
+  </div>
+  <article>
+    <h3>animation <br /> hot dog puppy</h3>
+    <Image src={project1} alt="Picture of hot dog puppy the game" />
+    <p>Designed and developed a mini game about a hot dog puppy</p>
+  </article>
+</section>
+
+<style>
+  @layer components {
+    article {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+
+      img {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        border-radius: 1rem;
+      }
+    }
+  }
+</style>
