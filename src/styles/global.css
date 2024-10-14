@@ -74,7 +74,7 @@ h3 {
   text-transform: uppercase;
   color: var(--color-txt);
 
-  --flow-space: var(var(--space-s));
+  --flow-space: var(--space-s);
 }
 h4 {
   font-family: var(--primary-font);
@@ -96,7 +96,7 @@ a {
   color: var(--color-txt);
   max-width: 40ch;
 
-  --flow-space: var(var(--space-xs));
+  --flow-space: var(--space-xs);
 }
 
 body {
