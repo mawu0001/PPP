@@ -8,42 +8,41 @@ import profilePicture from "../assets/images/profilePicture.png";
     <Image src={profilePicture} alt="Profile picture of Marie Wulff" />
     <article>
       <h4><span>02/</span></h4>
-      <h2>about</h2>
+      <h2>om mig</h2>
       <p>
-        I’m currently studying at Copenhagen School of Design and Technology.
-        I’ve chosen to specialise in <span>frontend</span> design.
+        Jeg studerer i øjeblikket på Københavns Design- og Teknologiskole. Jeg
+        har valgt at specialisere mig i <span>frontend</span> design.
+      </p>
+      <br />
+      <p>
+        I min fritid kan fange mig, med mine venner, træne i mit lokale
+        fitnesscenter eller se en film i biografen.
+      </p>
+      <br />
+      <p>
+        Jeg vil meget gerne studere backend-udvikling og blive full-stack
+        udvikler i fremtiden.
       </p>
     </article>
   </div>
-  <ul>
-    <li>
-      I’m would love to study backend developing, and become a full-stack
-      developer in the future.
-    </li>
-    <li>
-      In my spare time, catch me hanging out with my friends, working out in my
-      local gym or watching a movie in the cinema.
-    </li>
-  </ul>
 </section>
 
 <style>
   div {
-    display: flex;
-    place-content: space-evenly;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
     article {
-      place-self: center;
+      margin-bottom: 1rem;
     }
   }
   img {
     width: 15rem;
     height: auto;
     border-radius: 5%;
+    place-self: center;
   }
-  ul {
+  /* ul {
     list-style: none;
     display: flex;
     gap: 1rem;
@@ -55,11 +54,17 @@ import profilePicture from "../assets/images/profilePicture.png";
     padding: 1rem;
     border-radius: 2rem;
     max-width: 24rem;
-  }
+  } */
 
   @media (max-width: 800px) {
     img {
       order: 2;
+    }
+  }
+  @media (max-width: 600px) {
+    div {
+      display: flex;
+      flex-direction: column;
     }
   }
 </style>
